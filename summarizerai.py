@@ -17,7 +17,7 @@ openai.api_key = st.secrets["pass"]
 
 
 st.image(image)
-st.title("DocTranslator : openAI GPT-4 + Streamlit")
+st.title("DocTranslator : openAI GPT-3.5-turbo + Streamlit")
 
 
 article_text = st.text_area("Provide your text in English.")
@@ -39,7 +39,7 @@ if len(article_text)>100:
     if st.button("Generate Translation",type='primary'):
     # Use GPT-3 to generate a summary of the article
         response = openai.Completion.create(
-            model="gpt-4",
+            model="gpt-3.5-turbo",
             #prompt= language + article_text,
             messages = message,
             max_tokens = None,
