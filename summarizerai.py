@@ -25,18 +25,18 @@ output_size = st.radio(label = "What language would you like to translate?",
                     options= ["Japanese", "French", "Spanish"])
 
 if output_size == "Japanese":
-    language = 'Japanese'
+    language = "Japanese"
 elif output_size == "French":
-    out_token = 'French'
+    out_token = "French"
 else:
-    out_token = 'Spanish'
+    out_token = "Spanish"
 
 if len(article_text)>100:
     if st.button("Generate Translation",type='primary'):
     # Use GPT-3 to generate a summary of the article
         response = openai.Completion.create(
             model="gpt-4",
-            prompt="Please translate this text from English into" + out_token + ":" + article_text,
+            prompt="Please translate this text from English into " + out_token + ":" + article_text,
             max_tokens = None,
             temperature = 1,
         )
