@@ -34,6 +34,7 @@ else:
    
 message=[{"role": "user", "content": language + article_text}] 
 print(message)
+
 if len(article_text)>100:
     if st.button("Generate Translation",type='primary'):
     # Use GPT-3 to generate a summary of the article
