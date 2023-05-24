@@ -31,9 +31,8 @@ elif output_size == "French":
 else:
     language = "Please translate this text from English into Spanish: "
 
- messages=[{"role": "user", "content": language + article_text}]   
-    
-    
+   
+messages=[{"role": "user", "content": language + article_text}]    
 if len(article_text)>100:
     if st.button("Generate Translation",type='primary'):
     # Use GPT-3 to generate a summary of the article
