@@ -36,7 +36,7 @@ if len(article_text)>100:
     # Use GPT-3 to generate a summary of the article
         response = openai.Completion.create(
             model="gpt-4",
-            prompt="Please translate this text from English into " + out_token + ":" + article_text,
+            prompt="Please translate this text from English into " + out_token + article_text,
             max_tokens = None,
             temperature = 1,
         )
