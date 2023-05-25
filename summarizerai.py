@@ -19,15 +19,17 @@ openai.api_key = st.secrets["pass"]
 st.image(image)
 st.title("DocTranslator : openAI GPT-4 + Streamlit")
 
-
+#Japanese, Korean, Simplified Chinese, Traditional Chinese, German, Spanish, French, Italian, Brazilian Portuguese
 article_text = st.text_area("Provide your text in English.")
 output_size = st.radio(label = "What language would you like to translate?", 
-                    options= ["Japanese", "French", "Spanish"])
+                    options= ["Japanese", "French", "Spanish", "Korean"])
 
 if output_size == "Japanese":
     language = "Please translate this text from English into Japanese: "
 elif output_size == "French":
     language = "Please translate this text from English into French: "
+elif output_size == "Korean":
+    language = "Please translate this text from English into Korean: "
 else:
     language = "Please translate this text from English into Spanish: "
 
